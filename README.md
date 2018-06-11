@@ -1,120 +1,125 @@
-# react-native-settings-components
+# react-native-settings-components - fork by [radi-cho](http://github.com/radi-cho)
 
-![npm](https://img.shields.io/npm/v/react-native-settings-components.svg)
-![dependencies](https://img.shields.io/david/florianstahr/react-native-settings-components.svg)
+Settings components for React Native in style of native iOS or Android components. <br />
+Uses [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs) for dialogs on Android.
 
-Settings components for React Native in style of native iOS or Android components. Uses [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs) for dialogs on Android.
+> This project is fork of [JesLabs/react-native-settings-components](https://github.com/JesLabs/react-native-settings-components) which is fork of [florianstahr/react-native-settings-components](https://github.com/florianstahr/react-native-settings-components). The previous repositories are not well maintained but we need something similar in [RSG](https://github.com/RSG-Group)'s project and that's why I forked it. We'll modify its structure to meet RSG's requirements. However feel free to use it in your own projects or suggest new features.
 
-## Showcase
-![react-native-settings-components ios screenshot](https://i.imgur.com/5cV48CA.png "Screenshot iOS") ![react-native-settings-components android screenshot](https://i.imgur.com/VKCqNaA.png "Screenshot Android")
+> If you're one of the previous contributors and you have any questions, feel free to contact us on rsg.group.here@gmail.com
 
-## Install
+## Installation
 
 ```bash
-npm install react-native-settings-components --save
-```
-or
-```bash
-yarn add react-native-settings-components
+# via NPM
+npm i https://github.com/radi-cho/react-native-settings-components
+# or via Yarn
+yarn add https://github.com/radi-cho/react-native-settings-components
 ```
 
 ## Usage
 
 ```javascript
-import {SettingsDividerShort, SettingsDividerLong, SettingsEditText, SettingsCategoryHeader, SettingsSwitch, SettingsPicker} from 'react-native-settings-components';
+import {
+  SettingsDividerShort,
+  SettingsDividerLong,
+  SettingsEditText,
+  SettingsCategoryHeader,
+  SettingsSwitch,
+  SettingsPicker
+} from "react-native-settings-components";
 
 export default class App extends Component {
-
   constructor() {
     super();
     this.state = {
-      username: '',
+      username: "",
       allowPushNotifications: false,
-      gender: '',
+      gender: ""
     };
   }
 
   render() {
-
-    <ScrollView style={{flex: 1, backgroundColor: (Platform.OS === 'ios') ? colors.iosSettingsBackground : colors.white}}>
-
-        <SettingsCategoryHeader title={'My Account'} textStyle={(Platform.OS === 'android') ? {color: colors.monza} : null}/>
-
-        <SettingsDividerLong android={false}/>
-
-        <SettingsEditText
-            title="Username"
-            dialogDescription={'Enter your username.'}
-            valuePlaceholder="..."
-            negativeButtonTitle={'Cancel'}
-            buttonRightTitle={'Save'}
-            onSaveValue={(value) => {
-                console.log('username:', value);
-                this.setState({
-                    username: value
-                });
-            }}
-            value={this.state.username}
-            dialogAndroidProps={{
-                widgetColor: colors.monza,
-                positiveColor: colors.monza,
-                negativeColor: colors.monza,
-            }}
-        />
-
-        <SettingsDividerShort/>
-
-        <SettingsPicker
-            title="Gender"
-            dialogDescription={'Choose your gender.'}
-            possibleValues={[
-                {label: '...', value: ''},
-                {label: 'male', value: 'male'},
-                {label: 'female', value: 'female'},
-                {label: 'other', value: 'other'}
-            ]}
-            negativeButtonTitle={'Cancel'}
-            buttonRightTitle={'Save'}
-            onSaveValue={value => {
-                console.log('gender:', value);
-                this.setState({
-                    gender: value
-                });
-            }}
-            value={this.state.gender}
-            styleModalButtonsText={{color: colors.monza}}
-        />
-
-        ...
-
-        <SettingsSwitch
-            title={'Allow Push Notifications'}
-            onSaveValue={(value) => {
-                console.log('allow push notifications:', value);
-                this.setState({
-                    allowPushNotifications: value
-                });
-            }}
-            value={this.state.allowPushNotifications}
-            thumbTintColor={(this.state.allowPushNotifications) ? colors.switchEnabled : colors.switchDisabled}
-        />
-
-        ...
-
-      </ScrollView>
-
-    }
-
+    <ScrollView
+      style={{
+        flex: 1,
+        backgroundColor:
+          Platform.OS === "ios" ? colors.iosSettingsBackground : colors.white
+      }}
+    >
+      <SettingsCategoryHeader
+        title={"My Account"}
+        textStyle={Platform.OS === "android" ? { color: colors.monza } : null}
+      />
+      <SettingsDividerLong android={false} />
+      <SettingsEditText
+        title="Username"
+        dialogDescription={"Enter your username."}
+        valuePlaceholder="..."
+        negativeButtonTitle={"Cancel"}
+        buttonRightTitle={"Save"}
+        onSaveValue={value => {
+          console.log("username:", value);
+          this.setState({
+            username: value
+          });
+        }}
+        value={this.state.username}
+        dialogAndroidProps={{
+          widgetColor: colors.monza,
+          positiveColor: colors.monza,
+          negativeColor: colors.monza
+        }}
+      />
+      <SettingsDividerShort />
+      <SettingsPicker
+        title="Gender"
+        dialogDescription={"Choose your gender."}
+        possibleValues={[
+          { label: "...", value: "" },
+          { label: "male", value: "male" },
+          { label: "female", value: "female" },
+          { label: "other", value: "other" }
+        ]}
+        negativeButtonTitle={"Cancel"}
+        buttonRightTitle={"Save"}
+        onSaveValue={value => {
+          console.log("gender:", value);
+          this.setState({
+            gender: value
+          });
+        }}
+        value={this.state.gender}
+        styleModalButtonsText={{ color: colors.monza }}
+      />
+      ...
+      <SettingsSwitch
+        title={"Allow Push Notifications"}
+        onSaveValue={value => {
+          console.log("allow push notifications:", value);
+          this.setState({
+            allowPushNotifications: value
+          });
+        }}
+        value={this.state.allowPushNotifications}
+        thumbTintColor={
+          this.state.allowPushNotifications
+            ? colors.switchEnabled
+            : colors.switchDisabled
+        }
+      />
+      ...
+    </ScrollView>;
+  }
 }
 
 const colors = {
-  iosSettingsBackground: 'rgb(235,235,241)',
-  white: '#FFFFFF',
-  monza: '#C70039',
-  switchEnabled: (Platform.OS === 'android') ? '#C70039' : null,
-  switchDisabled: (Platform.OS === 'android') ? '#efeff3' : null,
-  switchOnTintColor: (Platform.OS === 'android') ? 'rgba(199, 0, 57, 0.6)' : null,
-  blueGem: '#27139A',
+  iosSettingsBackground: "rgb(235,235,241)",
+  white: "#FFFFFF",
+  monza: "#C70039",
+  switchEnabled: Platform.OS === "android" ? "#C70039" : null,
+  switchDisabled: Platform.OS === "android" ? "#efeff3" : null,
+  switchOnTintColor: Platform.OS === "android" ? "rgba(199, 0, 57, 0.6)" : null,
+  blueGem: "#27139A"
 };
 ```
 
@@ -222,15 +227,5 @@ Prop | Description | Type | Default
 `onTintColor` | switch background color when the switch is turned on | Color | `null`
 `switchProps` | `Switch` component props except the ones mentioned before | `Switch` Component Props | `{}`
 
-## Example
-
-There is an example app in the [example](example/) directory.
-
-Run iOS version by
-
-```bash
-git clone https://github.com/florianstahr/react-native-settings-components.git
-npm install
-react-native link
-react-native run-ios
-```
+## Showcase
+![react-native-settings-components ios screenshot](https://i.imgur.com/5cV48CA.png "Screenshot iOS") ![react-native-settings-components android screenshot](https://i.imgur.com/VKCqNaA.png "Screenshot Android")
