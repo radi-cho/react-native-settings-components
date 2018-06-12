@@ -301,7 +301,7 @@ class SettingsPicker extends Component {
 const styles = StyleSheet.create({
   defaultContainerStyle: {
     padding: 0,
-    height: 50,
+    height: 38,
     backgroundColor: "white",
     alignItems: "center",
     flexDirection: "row"
