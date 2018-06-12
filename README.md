@@ -127,105 +127,110 @@ const colors = {
 
 ### SettingsCategoryHeader
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`title` | category title | String | *Required*
-`container` | container props except style | Object | `{}`
-`containerStyle` | container style prop | ViewPropTypes | `{}`
-`titleProps` | title props except style | `Text` Component Props / Object | `{}`
-`titleStyle` | title style prop | `Text` PropTypes | `{}`
+| Prop             | Description                  | Type                            | Default    |
+| ---------------- | ---------------------------- | ------------------------------- | ---------- |
+| `title`          | category title               | String                          | *Required* |
+| `container`      | container props except style | Object                          | `{}`       |
+| `containerStyle` | container style prop         | ViewPropTypes                   | `{}`       |
+| `titleProps`     | title props except style     | `Text` Component Props / Object | `{}`       |
+| `titleStyle`     | title style prop             | `Text` PropTypes                | `{}`       |
+
+### SettingsTextLabel
+
+The same props as [`SettingsCategoryHeader`](#settingscategoryheader)'s props. <br />
+Take a look at the [#1](https://github.com/radi-cho/react-native-settings-components/issues/1) for more information...
 
 ### SettingsDividerLong
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`ios` | display on iOS | Boolean | `true`
-`android` | display on Android | Boolean | `true`
-`dividerStyle` | divider style prop | ViewPropTypes | `{}`
+| Prop           | Description        | Type          | Default |
+| -------------- | ------------------ | ------------- | ------- |
+| `ios`          | display on iOS     | Boolean       | `true`  |
+| `android`      | display on Android | Boolean       | `true`  |
+| `dividerStyle` | divider style prop | ViewPropTypes | `{}`    |
 
 ### SettingsDividerShort
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`ios` | display on iOS | Boolean | `true`
-`android` | display on Android | Boolean | `true`
-`containerStyle` | container style prop | ViewPropTypes | `{}`
-`dividerStyle` | divider style prop | ViewPropTypes | `{}`
+| Prop             | Description          | Type          | Default |
+| ---------------- | -------------------- | ------------- | ------- |
+| `ios`            | display on iOS       | Boolean       | `true`  |
+| `android`        | display on Android   | Boolean       | `true`  |
+| `containerStyle` | container style prop | ViewPropTypes | `{}`    |
+| `dividerStyle`   | divider style prop   | ViewPropTypes | `{}`    |
 
 ### SettingsEditText
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`containerProps` | container props except style | `View` Component Props | `{}`
-`containerStyle` | container style prop | ViewPropTypes | `{}`
-`disabledOverlayStyle` | component overlay style if setting is disabled | ViewPropTypes | `{}`
-`titleProps` | title props except style | `Text` Component Props | `{}`
-`titleStyle` | title style prop | `Text` PropTypes | `{}`
-`title` | title of setting | String | *Required*
-`valueProps` | value props except style | `Text` Component Props | `{}`
-`valueStyle` | value style prop | `Text` PropTypes | `{}`
-`value` | value of setting | String | *Required*
-`valuePlaceholder` | placeholder if value is empty | String | `...`
-`valueDisplay` | Value formatter | Function (String) => String | null
-`negativeButtonTitle` | negative dialog buttons title | String | *Required*
-`positiveButtonTitle` | positive dialog buttons title | String | *Required*
-`dialogDescription` | text explaining what the user should do e.g. | String | `''``
-`onSaveValue` | callback to be invoked when the positive dialog button is pressed | String | *Required*
-`disabled` | whether the settings value should be editable or not | Boolean | `false`
-`iosDialogInputType` | input type of the dialog alert on ios | String | `plain-text`
-`androidDialogInputType` | input type of the dialog alert on android (see [`Android InputType`](https://developer.android.com/reference/android/text/InputType.html)) | Number | 1
-`androidDialogProps` | input dialog props on android (see [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs)) | String | `{}`
-`touchableProps` | props of touchable opening input dialog | String | `{}`
+| Prop                     | Description                                                                                                                                | Type                        | Default      |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ------------ |
+| `containerProps`         | container props except style                                                                                                               | `View` Component Props      | `{}`         |
+| `containerStyle`         | container style prop                                                                                                                       | ViewPropTypes               | `{}`         |
+| `disabledOverlayStyle`   | component overlay style if setting is disabled                                                                                             | ViewPropTypes               | `{}`         |
+| `titleProps`             | title props except style                                                                                                                   | `Text` Component Props      | `{}`         |
+| `titleStyle`             | title style prop                                                                                                                           | `Text` PropTypes            | `{}`         |
+| `title`                  | title of setting                                                                                                                           | String                      | *Required*   |
+| `valueProps`             | value props except style                                                                                                                   | `Text` Component Props      | `{}`         |
+| `valueStyle`             | value style prop                                                                                                                           | `Text` PropTypes            | `{}`         |
+| `value`                  | value of setting                                                                                                                           | String                      | *Required*   |
+| `valuePlaceholder`       | placeholder if value is empty                                                                                                              | String                      | `...`        |
+| `valueDisplay`           | Value formatter                                                                                                                            | Function (String) => String | null         |
+| `negativeButtonTitle`    | negative dialog buttons title                                                                                                              | String                      | *Required*   |
+| `positiveButtonTitle`    | positive dialog buttons title                                                                                                              | String                      | *Required*   |
+| `dialogDescription`      | text explaining what the user should do e.g.                                                                                               | String                      | `''``        |
+| `onSaveValue`            | callback to be invoked when the positive dialog button is pressed                                                                          | String                      | *Required*   |
+| `disabled`               | whether the settings value should be editable or not                                                                                       | Boolean                     | `false`      |
+| `iosDialogInputType`     | input type of the dialog alert on ios                                                                                                      | String                      | `plain-text` |
+| `androidDialogInputType` | input type of the dialog alert on android (see [`Android InputType`](https://developer.android.com/reference/android/text/InputType.html)) | Number                      | 1            |
+| `androidDialogProps`     | input dialog props on android (see [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs))                             | String                      | `{}`         |
+| `touchableProps`         | props of touchable opening input dialog                                                                                                    | String                      | `{}`         |
 
 ### SettingsPicker
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`containerProps` | container props except style | `View` Component Props | `{}`
-`containerStyle` | container style prop | ViewPropTypes | `{}`
-`disabledOverlayStyle` | component overlay style if setting is disabled | ViewPropTypes | `{}`
-`titleProps` | title props except style | `Text` Component Props | `{}`
-`titleStyle` | title style prop | `Text` PropTypes | `{}`
-`title` | title of setting | String | *Required*
-`valueProps` | value props except style | `Text` Component Props | `{}`
-`valueStyle` | value style prop | `Text` PropTypes | `{}`
-`value` | value of setting | String | *Required*
-`possibleValues` | picker values | Array of objects in format `{label: string, value: string}` | *Required*
-`valuePlaceholder` | placeholder if value is empty | String | `...`
-`negativeButtonTitle` | negative dialog buttons title | String | *Required*
-`positiveButtonTitle` | positive dialog buttons title | String | *Required*
-`dialogDescription` | text explaining what the user should do e.g. | String | `''`
-`modalDescriptionStyle` | modal description style prop | `Text` PropTypes | `{}`
-`onSaveValue` | callback to be invoked when the positive dialog button is pressed | String | *Required*
-`disabled` | whether the settings value should be editable or not | Boolean | `false`
-`modalStyle` | modal `ScrollView` style prop | ViewPropTypes | `{}`
-`modalInnerStyle` | modal `ScrollView` inner `View` style prop | ViewPropTypes | `{}`
-`modalButtonsTitleStyle` | modal buttons style prop (positive and negative button) | `Text` PropTypes | `{}`
-`modalButtonsTitleNegativeStyle` | value style prop | `Text` PropTypes | `{}`
-`modalButtonsTitlePositiveStyle` | value style prop | `Text` PropTypes | `{}`
+| Prop                             | Description                                                       | Type                                                        | Default    |
+| -------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------- | ---------- |
+| `containerProps`                 | container props except style                                      | `View` Component Props                                      | `{}`       |
+| `containerStyle`                 | container style prop                                              | ViewPropTypes                                               | `{}`       |
+| `disabledOverlayStyle`           | component overlay style if setting is disabled                    | ViewPropTypes                                               | `{}`       |
+| `titleProps`                     | title props except style                                          | `Text` Component Props                                      | `{}`       |
+| `titleStyle`                     | title style prop                                                  | `Text` PropTypes                                            | `{}`       |
+| `title`                          | title of setting                                                  | String                                                      | *Required* |
+| `valueProps`                     | value props except style                                          | `Text` Component Props                                      | `{}`       |
+| `valueStyle`                     | value style prop                                                  | `Text` PropTypes                                            | `{}`       |
+| `value`                          | value of setting                                                  | String                                                      | *Required* |
+| `possibleValues`                 | picker values                                                     | Array of objects in format `{label: string, value: string}` | *Required* |
+| `valuePlaceholder`               | placeholder if value is empty                                     | String                                                      | `...`      |
+| `negativeButtonTitle`            | negative dialog buttons title                                     | String                                                      | *Required* |
+| `positiveButtonTitle`            | positive dialog buttons title                                     | String                                                      | *Required* |
+| `dialogDescription`              | text explaining what the user should do e.g.                      | String                                                      | `''`       |
+| `modalDescriptionStyle`          | modal description style prop                                      | `Text` PropTypes                                            | `{}`       |
+| `onSaveValue`                    | callback to be invoked when the positive dialog button is pressed | String                                                      | *Required* |
+| `disabled`                       | whether the settings value should be editable or not              | Boolean                                                     | `false`    |
+| `modalStyle`                     | modal `ScrollView` style prop                                     | ViewPropTypes                                               | `{}`       |
+| `modalInnerStyle`                | modal `ScrollView` inner `View` style prop                        | ViewPropTypes                                               | `{}`       |
+| `modalButtonsTitleStyle`         | modal buttons style prop (positive and negative button)           | `Text` PropTypes                                            | `{}`       |
+| `modalButtonsTitleNegativeStyle` | value style prop                                                  | `Text` PropTypes                                            | `{}`       |
+| `modalButtonsTitlePositiveStyle` | value style prop                                                  | `Text` PropTypes                                            | `{}`       |
 
 ### SettingsSwitch
 
-Prop | Description | Type | Default
------ | ----- | ----- | -----
-`containerProps` | container props except style | `View` Component Props | `{}`
-`containerStyle` | container style prop | ViewPropTypes | `{}`
-`disabledOverlayStyle` | component overlay style if setting is disabled | ViewPropTypes | `{}`
-`titleProps` | title props except style | `Text` Component Props | `{}`
-`titleStyle` | title style prop | `Text` PropTypes | `{}`
-`title` | title of setting | String | *Required* | String | *Required*
-`onTitlePress` | callback to be invoked when the title is pressed. If defined, a vertical divider is added before the switch | Function | null
-`descriptionProps` | description props except style | `Text` Component Props | `{}`
-`descriptionStyle` | description style prop | `Text` PropTypes | `{}`
-`description` | description of setting | String | null
-`switchWrapperProps` | switch wrapper props except style | `View` Component Props | `{}`
-`switchWrapperStyle` | switch wrapper style prop | `View` PropTypes | `{}`
-`value` | value of setting | Boolean | *Required*
-`disabled` | whether the settings value should be editable or not | Boolean | `false`
-`onSaveValue` | callback to be invoked when the positive dialog button is pressed | String | *Required*
-`thumbTintColor` | switch thumb tint color | Color | `null`
-`onTintColor` | switch background color when the switch is turned on | Color | `null`
-`switchProps` | `Switch` component props except the ones mentioned before | `Switch` Component Props | `{}`
+| Prop                   | Description                                                                                                 | Type                     | Default    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| `containerProps`       | container props except style                                                                                | `View` Component Props   | `{}`       |
+| `containerStyle`       | container style prop                                                                                        | ViewPropTypes            | `{}`       |
+| `disabledOverlayStyle` | component overlay style if setting is disabled                                                              | ViewPropTypes            | `{}`       |
+| `titleProps`           | title props except style                                                                                    | `Text` Component Props   | `{}`       |
+| `titleStyle`           | title style prop                                                                                            | `Text` PropTypes         | `{}`       |
+| `title`                | title of setting                                                                                            | String                   | *Required* | String | *Required* |
+| `onTitlePress`         | callback to be invoked when the title is pressed. If defined, a vertical divider is added before the switch | Function                 | null       |
+| `descriptionProps`     | description props except style                                                                              | `Text` Component Props   | `{}`       |
+| `descriptionStyle`     | description style prop                                                                                      | `Text` PropTypes         | `{}`       |
+| `description`          | description of setting                                                                                      | String                   | null       |
+| `switchWrapperProps`   | switch wrapper props except style                                                                           | `View` Component Props   | `{}`       |
+| `switchWrapperStyle`   | switch wrapper style prop                                                                                   | `View` PropTypes         | `{}`       |
+| `value`                | value of setting                                                                                            | Boolean                  | *Required* |
+| `disabled`             | whether the settings value should be editable or not                                                        | Boolean                  | `false`    |
+| `onSaveValue`          | callback to be invoked when the positive dialog button is pressed                                           | String                   | *Required* |
+| `thumbTintColor`       | switch thumb tint color                                                                                     | Color                    | `null`     |
+| `onTintColor`          | switch background color when the switch is turned on                                                        | Color                    | `null`     |
+| `switchProps`          | `Switch` component props except the ones mentioned before                                                   | `Switch` Component Props | `{}`       |
 
 ## Showcase
 ![react-native-settings-components ios screenshot](https://i.imgur.com/5cV48CA.png "Screenshot iOS") ![react-native-settings-components android screenshot](https://i.imgur.com/VKCqNaA.png "Screenshot Android")
