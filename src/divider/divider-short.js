@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 1,
     paddingLeft: 16,
+    paddingRight: 16,
     backgroundColor: "rgb(255,255,255)"
   },
   dividerStyle: {
