@@ -186,7 +186,7 @@ class SettingsSwitch extends Component {
 const styles = StyleSheet.create({
   defaultContainerStyle: {
     padding: 0,
-    minHeight: 38,
+    minHeight: 44,
     backgroundColor: "white",
     alignItems: "center",
     flexDirection: "row"

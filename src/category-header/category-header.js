@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontSize: Platform.OS === "ios" ? 13 : 16,
     padding: 16,
     paddingTop: 10,
-    paddingBottom: 3
+    paddingBottom: 2
   }
 });
 
